@@ -1,4 +1,4 @@
-.container {
+/* .container {
   min-height: 100vh;
   padding: 0 0.5rem;
   display: flex;
@@ -119,4 +119,24 @@
     width: 100%;
     flex-direction: column;
   }
+} */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.byline {
+  position: absolute;
+  bottom: 25%;
+}
+
+.byline > h1 {
+  color: #0fc1ca;
+  font-size: 1.875rem;
+  margin-bottom: 1.25rem;
 }
