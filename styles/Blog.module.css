@@ -16,7 +16,6 @@
   padding: 15px 0 15px 20px;
   width: 100%;
   font-family: inherit;
-  background-color: #e6e6e6;
 }
 
 .header button {
@@ -27,7 +26,6 @@
   padding: 0 20px 0 0;
   font-family: inherit;
   font-size: inherit;
-  background-color: #e6e6e6;
   font-size: 1.25rem;
   font-size: 2rem;
   display: flex;
@@ -35,8 +33,10 @@
 }
 
 .header button,
-.header input {
+.header input,
+.header input:focus {
   outline: none;
+  background-color: #e6e6e6;
 }
 
 .header form {
