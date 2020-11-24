@@ -27,6 +27,10 @@
   font-size: inherit;
 }
 
+.body ul {
+  margin-left: 3rem;
+}
+
 .body p:not(:last-child),
 .body ul:not(:last-child) {
   margin-bottom: 2rem;

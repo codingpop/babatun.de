@@ -11,8 +11,20 @@ interface NavLinkProps {
 const NavLink: FC<NavLinkProps> = ({ href, children, passHref = false }) => {
   const router = useRouter();
 
+  const isActive = () => {
+    if (router.pathname === href) {
+      return true;
+    }
+
+    if (router.pathname !== href && router.pathname.includes(href)) {
+      return true;
+    }
+
+    return false;
+  };
+
   let { className = '' } = children.props;
-  if (router.pathname === href) {
+  if (isActive()) {
     className = `${className} ${styles.selected}`;
   }
 
