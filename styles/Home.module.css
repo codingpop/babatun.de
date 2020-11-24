@@ -132,11 +132,14 @@
 
 .byline {
   position: absolute;
-  bottom: 25%;
+  bottom: 15%;
 }
 
 .byline > h1 {
   color: #0fc1ca;
-  font-size: 1.875rem;
   margin-bottom: 1.25rem;
+}
+
+.view {
+  min-height: 20rem;
 }

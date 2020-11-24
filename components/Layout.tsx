@@ -9,8 +9,8 @@ const Layout: FC = ({ children }) => {
       <div className={styles.layout}>
         <NavBar />
         {children}
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 };

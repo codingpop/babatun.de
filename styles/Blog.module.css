@@ -1,0 +1,56 @@
+.header {
+  text-align: center;
+  /* padding: 5rem 0; */
+  margin-top: 6rem;
+}
+
+.header h1 {
+  margin-bottom: 3rem;
+}
+
+.header input {
+  height: 4.375rem;
+  border-radius: 1.25rem 0 0 1.25rem;
+  border: 2px solid gray;
+  border-right: none;
+  font-size: 1.125rem;
+  padding: 15px 0 15px 20px;
+  width: 100%;
+  font-family: inherit;
+  background-color: #e6e6e6;
+}
+
+.header button {
+  height: 4.375rem;
+  border-radius: 0 1.25rem 1.25rem 0;
+  border: 2px solid gray;
+  border-left: none;
+  padding: 0 20px 0 0;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: #e6e6e6;
+  font-size: 1.25rem;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.header button,
+.header input {
+  outline: none;
+}
+
+.header form {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  max-width: 700px;
+  margin: auto;
+}
+
+.grid {
+  margin: 5rem 0 5rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 2rem;
+}

@@ -1,4 +1,4 @@
 .layout {
-  min-height: 100vh;
+  min-height: calc(100vh - 3.125rem);
   position: relative;
 }

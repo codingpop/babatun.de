@@ -20,25 +20,27 @@ const HomePage = () => {
           />
         </div>
 
-        <div className="container">
-          <section className={`${styles.byline}`}>
-            <h1 className="zLow">
-              Hi, I&apos;m Babatunde Adeyemi.
-              <br />
-              I&apos;m a Software Engineer.
-            </h1>
+        <div className={styles.view}>
+          <div className="container">
+            <section className={`${styles.byline}`}>
+              <h1>
+                Hi, I&apos;m Babatunde Adeyemi.
+                <br />
+                I&apos;m a Software Engineer.
+              </h1>
 
-            <p>
-              I&apos;m passionate about Go, Typescript, NodeJS, Docker,
-              <br />
-              Kubernetes, and distributed systems.
-              <br />
-              I&apos;m a Technical Team Lead at Studio 14, Birmingham.
-              <br />
-              I live in Lagos, Nigeria.
-              <br />
-            </p>
-          </section>
+              <p>
+                I&apos;m passionate about Go, Typescript, NodeJS, Docker,
+                <br />
+                Kubernetes, and distributed systems.
+                <br />
+                I&apos;m a Technical Team Lead at Studio 14, Birmingham.
+                <br />
+                I live in Lagos, Nigeria.
+                <br />
+              </p>
+            </section>
+          </div>
         </div>
       </Layout>
     </>
