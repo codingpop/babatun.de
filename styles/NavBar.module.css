@@ -112,7 +112,7 @@
   z-index: 1001;
 }
 
-@media (min-width: 50rem) {
+@media (min-width: 800px) {
   .mainMenu {
     position: static;
   }
