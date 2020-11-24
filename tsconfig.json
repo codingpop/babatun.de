@@ -18,7 +18,8 @@
     "paths": {
       "@config/*": ["config/*"],
       "@components/*": ["components/*"],
-      "@atoms/*": ["components/atoms/*"],
+      "@lib/*": ["lib/*"],
+      "@posts/*": ["posts/*"],
       "@styles/*": ["styles/*"]
     }
   },

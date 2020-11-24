@@ -84,12 +84,6 @@ small,
   font-size: var(--small);
 }
 
-/* @media (min-width: 0) {
-  :root {
-    --type-scale: 1.125;
-  }
-} */
-
 @media (min-width: 768px) {
   :root {
     --type-scale: 1.2;

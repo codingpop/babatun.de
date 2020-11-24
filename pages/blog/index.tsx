@@ -5,26 +5,36 @@ import { MdSearch } from 'react-icons/md';
 import Layout from '@components/Layout';
 import styles from '@styles/Blog.module.css';
 import BlogCard from '@components/BlogCard';
+import { getSortedPostsData } from '@lib/posts';
 
 interface PostProps {
-  id: string;
   title: string;
   slug: string;
+  date: string;
   summary: string;
   banner: string;
+  tags?: string[];
 }
 interface BlogProps {
-  post: PostProps;
+  initialPosts: PostProps[];
 }
 
-const Blog: FC<BlogProps> = () => {
+const Blog: FC<BlogProps> = ({ initialPosts = [] }) => {
   const [searchTerm, setSearchTerm] = useState('');
-  // const [posts, setPosts] = useState<PostProps[]>([]);
+  const [posts, setPosts] = useState<PostProps[]>(initialPosts);
+
+  const searchPosts = (term: string) => {
+    if (term) {
+      setPosts(initialPosts.filter(({ title }) => title.includes(term)));
+    } else {
+      setPosts(initialPosts);
+    }
+  };
 
   return (
     <>
       <Head>
-        <title>Babatunde Adeyemi | Blog</title>
+        <title>Blog posts</title>
       </Head>
 
       <Layout>
@@ -34,6 +44,7 @@ const Blog: FC<BlogProps> = () => {
             <form
               onSubmit={(event) => {
                 event.preventDefault();
+                searchPosts(searchTerm);
               }}
             >
               <input
@@ -44,6 +55,7 @@ const Blog: FC<BlogProps> = () => {
                 name="search"
                 onChange={(event) => {
                   setSearchTerm(event.target.value);
+                  searchPosts(event.target.value);
                 }}
               />
 
@@ -63,21 +75,28 @@ const Blog: FC<BlogProps> = () => {
             initial="hidden"
             animate="visible"
           >
-            {Array(45)
-              .fill('')
-              .map(() => (
-                <BlogCard
-                  banner="https://images.unsplash.com/photo-1605142811451-57f690e06dc7?ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80"
-                  title="A new day"
-                  summary="Loremsldjlfsd"
-                  slug="SDLKJFSLDJ/DSF"
-                />
-              ))}
+            {posts.map(({ title, summary, slug, banner }) => (
+              <BlogCard
+                banner={banner}
+                title={title}
+                summary={summary}
+                slug={slug}
+                key={slug}
+              />
+            ))}
           </motion.div>
         </div>
       </Layout>
     </>
   );
+};
+
+export const getStaticProps = async () => {
+  return {
+    props: {
+      initialPosts: getSortedPostsData(),
+    },
+  };
 };
 
 export default Blog;

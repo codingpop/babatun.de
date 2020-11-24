@@ -10,11 +10,16 @@
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
+    "date-fns": "^2.16.1",
     "framer-motion": "^2.9.4",
+    "gray-matter": "^4.0.2",
     "next": "10.0.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-icons": "^3.11.0"
+    "react-icons": "^3.11.0",
+    "remark": "^13.0.0",
+    "remark-html": "^13.0.1",
+    "stringz": "^2.1.0"
   },
   "devDependencies": {
     "@types/node": "^14.14.9",

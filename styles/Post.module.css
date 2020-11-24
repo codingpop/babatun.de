@@ -1,0 +1,54 @@
+.header {
+  margin-top: 7rem;
+}
+
+.banner {
+  height: 37.5rem;
+  position: relative;
+}
+
+.container,
+.title,
+.metadata {
+  width: 90%;
+  max-width: 990px;
+  margin: auto;
+}
+
+.title {
+  color: #0fc1ca;
+  text-align: center;
+  margin-top: 3rem;
+  width: 90%;
+  max-width: 990px;
+}
+
+.body {
+  font-size: inherit;
+}
+
+.body p:not(:last-child),
+.body ul:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.metadata {
+  font-size: var(--small);
+  display: flex;
+  font-style: italic;
+  justify-content: center;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+
+.metadata > *:not(:last-child) {
+  margin-right: 14px;
+}
+
+.metadata > :nth-child(2) {
+  font-style: normal;
+}
+
+.article {
+  margin-bottom: 10rem;
+}

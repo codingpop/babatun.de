@@ -11,6 +11,19 @@
 
 .title {
   text-align: center;
-  margin: 1.875rem 0;
-  /* font-size: inherit; */
+  margin: 1.5rem 0;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #0fc1ca;
+}
+
+.summary {
+  font-size: var(--small);
+  line-height: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.title,
+.summary {
+  padding: 0 20px;
 }
