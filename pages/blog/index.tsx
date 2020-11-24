@@ -2,6 +2,7 @@ import { FC, useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { MdSearch } from 'react-icons/md';
+import Fuse from 'fuse.js';
 import Layout from '@components/Layout';
 import styles from '@styles/Blog.module.css';
 import BlogCard from '@components/BlogCard';
@@ -22,10 +23,14 @@ interface BlogProps {
 const Blog: FC<BlogProps> = ({ initialPosts = [] }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [posts, setPosts] = useState<PostProps[]>(initialPosts);
+  const fuse = new Fuse(initialPosts, {
+    includeScore: true,
+    keys: ['title', 'tags', 'summary'],
+  });
 
   const searchPosts = (term: string) => {
     if (term) {
-      setPosts(initialPosts.filter(({ title }) => title.includes(term)));
+      setPosts(fuse.search(term).map(({ item }) => item));
     } else {
       setPosts(initialPosts);
     }

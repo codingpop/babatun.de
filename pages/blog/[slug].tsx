@@ -16,48 +16,46 @@ interface PostProps {
   body: string;
   tags?: string[];
 }
-const Post: FC<PostProps> = ({ title, banner, date, body, tags = [] }) => {
-  return (
-    <>
-      <Head>
-        <title>{title}</title>
-      </Head>
+const Post: FC<PostProps> = ({ title, banner, date, body, tags = [] }) => (
+  <>
+    <Head>
+      <title>{title}</title>
+    </Head>
 
-      <Layout>
-        <motion.div
-          variants={{
-            hidden: { opacity: 0 },
-            visible: { opacity: 1 },
-          }}
-        >
-          <article className={styles.article}>
-            <header className={styles.header}>
-              <figure className={styles.banner}>
-                <Image src={banner} layout="fill" objectFit="cover" />
-              </figure>
+    <Layout>
+      <motion.div
+        variants={{
+          hidden: { opacity: 0 },
+          visible: { opacity: 1 },
+        }}
+      >
+        <article className={styles.article}>
+          <header className={styles.header}>
+            <figure className={styles.banner}>
+              <Image src={banner} layout="fill" objectFit="cover" />
+            </figure>
 
-              <h1 className={styles.title}>{title}</h1>
+            <h1 className={styles.title}>{title}</h1>
 
-              <p className={styles.metadata}>
-                <span>
-                  <Date dateString={date} />
-                </span>
-                <span>||</span>
-                <span>{tags.join(', ')}</span>
-              </p>
-            </header>
+            <p className={styles.metadata}>
+              <span>
+                <Date dateString={date} />
+              </span>
+              <span>||</span>
+              <span>{tags.join(', ')}</span>
+            </p>
+          </header>
 
-            <section
-              // eslint-disable-next-line react/no-danger
-              dangerouslySetInnerHTML={{ __html: body }}
-              className={`${styles.container} ${styles.body}`}
-            />
-          </article>
-        </motion.div>
-      </Layout>
-    </>
-  );
-};
+          <section
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{ __html: body }}
+            className={`${styles.container} ${styles.body}`}
+          />
+        </article>
+      </motion.div>
+    </Layout>
+  </>
+);
 
 export const getStaticPaths = async () => {
   const paths = getAllSlugs();
