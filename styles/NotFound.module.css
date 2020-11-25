@@ -1,6 +1,5 @@
 .fourOFour {
-  font-size: 23rem;
-  letter-spacing: -70px;
+  font-size: 9rem;
   text-align: center;
   color: #0fc1ca;
 }
@@ -8,4 +7,16 @@
 .fourOFour > :first-child,
 .fourOFour > :last-child {
   color: #fcb829;
+}
+
+@media (min-width: 360px) {
+  .fourOFour {
+    font-size: 11rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .fourOFour {
+    font-size: 23rem;
+  }
 }
