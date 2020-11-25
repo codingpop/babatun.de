@@ -18,6 +18,7 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-icons": "^3.11.0",
+    "react-vertical-timeline-component": "^3.3.1",
     "remark": "^13.0.0",
     "remark-html": "^13.0.1",
     "stringz": "^2.1.0"

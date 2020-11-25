@@ -22,7 +22,7 @@ interface BlogProps {
 
 const Blog: FC<BlogProps> = ({ initialPosts = [] }) => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [posts, setPosts] = useState<PostProps[]>(initialPosts);
+  const [posts, setPosts] = useState(initialPosts);
   const fuse = new Fuse(initialPosts, {
     includeScore: true,
     keys: ['title', 'tags', 'summary'],

@@ -5,7 +5,7 @@ import NavLink from './NavLink';
 
 const NavBar = () => {
   return (
-    <header className={`${styles.navbar} container zLow`} id="">
+    <header className={`${styles.navbar} container`} id="">
       <span className={styles.logo}>
         <Link href="/" passHref>
           <a aria-current="page" className={styles.logoLink}>
@@ -20,7 +20,7 @@ const NavBar = () => {
         className={styles.menuToggle}
         aria-label="Open main menu"
       >
-        <MdMenu />
+        <MdMenu viewBox="0 0 21 21" />
       </a>
 
       <nav className={styles.mainMenu} id="main-menu">
@@ -39,8 +39,13 @@ const NavBar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink href="/work" passHref>
-              <a>Work</a>
+            <NavLink href="/open-source" passHref>
+              <a>Open source</a>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink href="/resume" passHref>
+              <a>Resume/CV</a>
             </NavLink>
           </li>
           <li>

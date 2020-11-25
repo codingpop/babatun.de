@@ -1,0 +1,11 @@
+.fourOFour {
+  font-size: 23rem;
+  letter-spacing: -70px;
+  text-align: center;
+  color: #0fc1ca;
+}
+
+.fourOFour > :first-child,
+.fourOFour > :last-child {
+  color: #fcb829;
+}

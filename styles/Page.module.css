@@ -1,0 +1,21 @@
+.header {
+  text-align: center;
+  margin-top: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header a {
+  color: #0fc1ca;
+  font-size: var(--h3);
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.header h1 {
+  margin-bottom: 3rem;
+}
