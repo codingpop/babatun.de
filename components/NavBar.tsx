@@ -38,21 +38,21 @@ const NavBar = () => {
               <a>Blog</a>
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink href="/open-source" passHref>
               <a>Open source</a>
             </NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink href="/resume" passHref>
-              <a>Resume/CV</a>
+              <a>CV/Resume</a>
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink href="/contact" passHref>
               <a>Contact</a>
             </NavLink>
-          </li>
+          </li> */}
         </ul>
       </nav>
 
