@@ -44,6 +44,7 @@ a {
 .container {
   margin: auto;
   width: 90%;
+  max-width: 120rem;
 }
 
 .relative {
