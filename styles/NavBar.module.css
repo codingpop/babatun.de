@@ -14,7 +14,7 @@
   padding-right: 1.25rem;
 }
 
-@keyframes cursorblink {
+@keyframes cursorBlink {
   0%,
   100% {
     background: transparent;
@@ -30,7 +30,7 @@
   display: inline-block;
   background: rgb(29, 35, 44);
   margin-left: 5px;
-  animation: cursorblink 1s step-end 0s infinite normal;
+  animation: cursorBlink 1s step-end 0s infinite normal;
 }
 
 .logoLink {
@@ -115,6 +115,7 @@
 @media (min-width: 900px) {
   .mainMenu {
     position: static;
+    background-color: transparent;
   }
 
   .ul {
