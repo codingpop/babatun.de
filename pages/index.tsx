@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import { FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa';
 import Layout from '@components/Layout';
 import styles from '@styles/Home.module.css';
 
@@ -39,6 +40,32 @@ const HomePage = () => {
                 I live in Lagos, Nigeria.
                 <br />
               </p>
+
+              <div className={styles.socialIcons}>
+                <a
+                  href="https://twitter.com/codingpop"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaTwitter />
+                </a>
+
+                <a
+                  href="https://linkedin.com/in/codingpop"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaLinkedin />
+                </a>
+
+                <a
+                  href="https://github.com/codingpop"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaGithub />
+                </a>
+              </div>
             </section>
           </div>
         </div>

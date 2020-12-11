@@ -20,3 +20,20 @@
 .view {
   min-height: 20rem;
 }
+
+.socialIcons {
+  font-size: 2rem;
+  margin-top: 10px;
+}
+
+.socialIcons > * {
+  display: inline-block;
+}
+
+.socialIcons > *:hover {
+  color: #0fc1ca;
+}
+
+.socialIcons > *:not(:last-child) {
+  margin-right: 15px;
+}
