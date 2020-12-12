@@ -14,7 +14,7 @@ const HomePage = () => {
       <Layout>
         <div className={styles.backdrop}>
           <Image
-            src="/images/tunde-black.jpg"
+            src="https://res.cloudinary.com/duc7lbtnq/image/upload/v1607786724/babatun.de/tunde-black.jpg"
             alt="Babatunde Adeyemi"
             layout="fill"
             objectFit="cover"
