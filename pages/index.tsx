@@ -14,7 +14,7 @@ const HomePage = () => {
       <Layout>
         <div className={styles.backdrop}>
           <Image
-            src="/images/tunde-black.jpg"
+            src="https://res.cloudinary.com/duc7lbtnq/image/upload/v1607786724/babatun.de/tunde-black.jpg"
             alt="Babatunde Adeyemi"
             layout="fill"
             objectFit="cover"
@@ -43,6 +43,7 @@ const HomePage = () => {
 
               <div className={styles.socialIcons}>
                 <a
+                  title="Twitter"
                   href="https://twitter.com/codingpop"
                   target="_blank"
                   rel="noreferrer"
@@ -51,6 +52,7 @@ const HomePage = () => {
                 </a>
 
                 <a
+                  title="Linkedin"
                   href="https://linkedin.com/in/codingpop"
                   target="_blank"
                   rel="noreferrer"
@@ -59,6 +61,7 @@ const HomePage = () => {
                 </a>
 
                 <a
+                  title="Github"
                   href="https://github.com/codingpop"
                   target="_blank"
                   rel="noreferrer"
