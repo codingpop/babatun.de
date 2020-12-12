@@ -5,11 +5,27 @@ class Document extends NextDocument {
     return (
       <Html>
         <Head>
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
+            rel="preconnect"
             href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap"
-            rel="stylesheet"
           />
+          <link rel="preload" as="style" href="(font CSS URL here)" />
+          <link
+            rel="stylesheet"
+            media="print"
+            // onLoad="this.onload=null;this.removeAttribute('media');"
+            onLoad={(e) => {
+              e.currentTarget.onload = null;
+              e.currentTarget.removeAttribute('media');
+            }}
+            href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap"
+          />
+          <noscript>
+            <link
+              rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap"
+            />
+          </noscript>
           <link rel="manifest" href="/manifest.json" />
           <link
             href="/icons/16x16.png"
