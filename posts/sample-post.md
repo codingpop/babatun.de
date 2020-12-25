@@ -1,7 +1,7 @@
 ---
-title: 'Two Forms of Pre-rendering'
+title: 'Just a sample post'
 date: '2020-01-01'
-summary: 'Next.js has two forms of pre-rendering: Static Generation and Server-side Rendering. The difference is in when it generates the HTML for a page. Static Generation is the pre-rendering method that generates the HTML at build time. The pre-rendered HTML is then reused on each request.'
+summary: 'This is just a sample post.'
 banner: 'https://images.unsplash.com/photo-1605142811451-57f690e06dc7?ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80'
 tags: 'react,next,ssr'
 ---
